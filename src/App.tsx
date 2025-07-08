@@ -1,6 +1,6 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import type { LatLngExpression } from 'leaflet';
-import 'leaflet/dist/leaflet.css';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import type { LatLngExpression } from 'leaflet'
+import 'leaflet/dist/leaflet.css'
 
 const initPos: LatLngExpression = [34.666536, 133.918078];  // Okayama Sta.
 
