@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "rm": "rm -rf docs",
+    "git": "git add . && git commit -m 'deploy' && git push origin master",
+    "deploy": "npm run rm && npm run build && npm run git",
     "lint": "eslint .",
     "preview": "vite preview"
   },
