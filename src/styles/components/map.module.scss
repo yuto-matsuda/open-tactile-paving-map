@@ -1,0 +1,22 @@
+.map {
+    height: 100vh;
+}
+
+.popup {
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        width: 200px;
+
+        .img {
+            width: 90%;
+        }
+
+        .timestamp {
+            font-size: 1.3em;
+            margin: 0;
+        }
+    }
+}
