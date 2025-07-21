@@ -1,5 +1,6 @@
 import styles from '../styles/components/map.module.scss'
 import { useEffect, useState } from 'react'
+import { getJPDateTime } from '../utils/datetime'
 import type { Pavement } from '../types/pavement'
 import { supabase } from '../libs/supabaseClient'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
@@ -49,7 +50,10 @@ export default function Map() {
             <Popup className={styles.popup}>
               <div className={styles.content}>
                 <img src={image_url} width='150' alt='photo' className={styles.img} />
-                <p className={styles.timestamp}>{new Date(camera_timestamp).toLocaleString()}</p>
+                <div className={styles.date}>
+                  <span className={styles.heading}>Captured At:</span>
+                  <p className={styles.timestamp}>{getJPDateTime(camera_timestamp)}</p>
+                </div>
               </div>
             </Popup>
           </Marker>
